@@ -5,6 +5,7 @@ export enum Action {
   Multiply = '*',
   Exponentiate = '^',
 }
+//111
 
 type RawCalculatorInput = {
   a: unknown;
@@ -19,7 +20,7 @@ type ValidCalculatorInput = {
 };
 
 export const simpleCalculator = (
-  rawInput: RawCalculatorInput,
+  rawInput: RawCalculatorInput
 ): number | null => {
   if (isInputValid(rawInput)) {
     const { a, b, action } = rawInput;
@@ -44,7 +45,7 @@ export const simpleCalculator = (
 };
 
 const isInputValid = (
-  input: RawCalculatorInput,
+  input: RawCalculatorInput
 ): input is ValidCalculatorInput => {
   const { a, b, action } = input;
 
